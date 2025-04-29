@@ -1,4 +1,7 @@
+.next
 node_modules/
-.next/
-.env
+/out
 .DS_Store
+*.pem
+
+/coverage
