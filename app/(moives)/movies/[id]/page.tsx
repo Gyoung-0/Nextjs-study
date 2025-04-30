@@ -6,18 +6,16 @@ interface IParams {
   params: Promise<{ id: string }>;
 }
 
-// ✅ generateMetadata - Promise 버전
 export async function generateMetadata({ params }: IParams) {
-  const { id } = await params;   // 🔥 Promise니까 여기서 await
+  const { id } = await params; 
   const movie = await getMovie(id);
   return {
     title: movie.title,
   };
 }
 
-// ✅ MovieDetailPage - Promise 버전
 export default async function MovieDetailPage({ params }: IParams) {
-  const { id } = await params;   // 🔥 Promise니까 여기서 await
+  const { id } = await params;   
 
   return (
     <div>
